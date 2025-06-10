@@ -1,0 +1,246 @@
+$date
+	Wed Jun 11 00:29:42 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ripple_carry_adder_tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " carry $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$scope module uut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % cin $end
+$var wire 4 ( sum [3:0] $end
+$var wire 1 " carry $end
+$var wire 3 ) c [2:0] $end
+$scope module f1 $end
+$var wire 1 * a $end
+$var wire 1 + b $end
+$var wire 1 , carry $end
+$var wire 1 % cin $end
+$var wire 1 - sum $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 . a $end
+$var wire 1 / b $end
+$var wire 1 0 carry $end
+$var wire 1 1 cin $end
+$var wire 1 2 sum $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 3 a $end
+$var wire 1 4 b $end
+$var wire 1 5 carry $end
+$var wire 1 6 cin $end
+$var wire 1 7 sum $end
+$upscope $end
+$scope module f4 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 " carry $end
+$var wire 1 : cin $end
+$var wire 1 ; sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+12
+11
+b1 )
+1,
+b11 !
+b11 (
+1-
+1+
+1*
+1%
+b1 $
+b1 '
+b1 #
+b1 &
+#20
+17
+16
+b11 )
+10
+02
+1;
+b1100 !
+b1100 (
+0-
+1/
+18
+0%
+b11 $
+b11 '
+b1001 #
+b1001 &
+#30
+1"
+0;
+1:
+01
+15
+b110 )
+0,
+07
+02
+b1 !
+b1 (
+1-
+0+
+14
+0*
+1.
+1%
+b110 $
+b110 '
+b1010 #
+b1010 &
+#40
+11
+16
+1,
+b111 )
+10
+02
+17
+1;
+0"
+b1100 !
+b1100 (
+0-
+1+
+1*
+0.
+13
+08
+0%
+b111 $
+b111 '
+b101 #
+b101 &
+#50
+0;
+0:
+b11 )
+05
+12
+1"
+b111 !
+b111 (
+1-
+04
+19
+1.
+03
+18
+1%
+b1011 $
+b1011 '
+b1011 #
+b1011 &
+#60
+07
+06
+00
+01
+1:
+1"
+0,
+12
+b100 )
+15
+0;
+b11 !
+b11 (
+1-
+14
+0*
+0.
+13
+08
+0%
+b1111 $
+b1111 '
+b100 #
+b100 &
+#70
+16
+10
+1:
+02
+15
+11
+07
+1;
+b111 )
+1,
+b1001 !
+b1001 (
+1-
+0/
+1*
+1.
+03
+18
+1%
+b1101 $
+b1101 '
+b1011 #
+b1011 &
+#80
+12
+17
+b1110 !
+b1110 (
+0-
+1/
+13
+0%
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#90

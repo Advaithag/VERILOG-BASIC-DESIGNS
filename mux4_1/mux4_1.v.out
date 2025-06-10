@@ -1,0 +1,43 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000024031d16ac0 .scope module, "mux4_1" "mux4_1" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /INPUT 4 "in";
+v0000024031d16c50_0 .net *"_ivl_1", 0 0, L_0000024031c41260;  1 drivers
+v0000024031d16cf0_0 .net *"_ivl_11", 0 0, L_0000024031c40f40;  1 drivers
+v0000024031d16d90_0 .net *"_ivl_13", 0 0, L_0000024031c418a0;  1 drivers
+v0000024031d16e30_0 .net *"_ivl_15", 0 0, L_0000024031c41a80;  1 drivers
+v0000024031d1ec10_0 .net *"_ivl_16", 0 0, L_0000024031c41da0;  1 drivers
+v0000024031d1ecb0_0 .net *"_ivl_3", 0 0, L_0000024031c41300;  1 drivers
+v0000024031d1ed50_0 .net *"_ivl_5", 0 0, L_0000024031c41bc0;  1 drivers
+v0000024031c411c0_0 .net *"_ivl_7", 0 0, L_0000024031c413a0;  1 drivers
+v0000024031c40ea0_0 .net *"_ivl_8", 0 0, L_0000024031c419e0;  1 drivers
+o0000024031c47188 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000024031c41c60_0 .net "in", 3 0, o0000024031c47188;  0 drivers
+v0000024031c41800_0 .net "out", 0 0, L_0000024031c416c0;  1 drivers
+o0000024031c471e8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000024031c41120_0 .net "sel", 1 0, o0000024031c471e8;  0 drivers
+L_0000024031c41260 .part o0000024031c471e8, 1, 1;
+L_0000024031c41300 .part o0000024031c471e8, 0, 1;
+L_0000024031c41bc0 .part o0000024031c47188, 3, 1;
+L_0000024031c413a0 .part o0000024031c47188, 2, 1;
+L_0000024031c419e0 .functor MUXZ 1, L_0000024031c413a0, L_0000024031c41bc0, L_0000024031c41300, C4<>;
+L_0000024031c40f40 .part o0000024031c471e8, 0, 1;
+L_0000024031c418a0 .part o0000024031c47188, 1, 1;
+L_0000024031c41a80 .part o0000024031c47188, 0, 1;
+L_0000024031c41da0 .functor MUXZ 1, L_0000024031c41a80, L_0000024031c418a0, L_0000024031c40f40, C4<>;
+L_0000024031c416c0 .functor MUXZ 1, L_0000024031c41da0, L_0000024031c419e0, L_0000024031c41260, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux4_1.v";

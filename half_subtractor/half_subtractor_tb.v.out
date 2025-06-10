@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000199246552b0 .scope module, "half_subtractor_tb" "half_subtractor_tb" 2 2;
+ .timescale 0 0;
+v0000019924655670_0 .var "a", 0 0;
+v000001992475b860_0 .var "b", 0 0;
+v000001992475b900_0 .net "borrow", 0 0, L_00000199247574f0;  1 drivers
+v000001992475b9a0_0 .net "difference", 0 0, L_0000019924758160;  1 drivers
+S_0000019924655440 .scope module, "uut" "half_subtractor" 2 5, 3 1 0, S_00000199246552b0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "difference";
+    .port_info 1 /OUTPUT 1 "borrow";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+L_0000019924758160 .functor XOR 1, v0000019924655670_0, v000001992475b860_0, C4<0>, C4<0>;
+L_0000019924757390 .functor NOT 1, v0000019924655670_0, C4<0>, C4<0>, C4<0>;
+L_00000199247574f0 .functor AND 1, L_0000019924757390, v000001992475b860_0, C4<1>, C4<1>;
+v00000199247580c0_0 .net *"_ivl_2", 0 0, L_0000019924757390;  1 drivers
+v0000019924756ef0_0 .net "a", 0 0, v0000019924655670_0;  1 drivers
+v0000019924759470_0 .net "b", 0 0, v000001992475b860_0;  1 drivers
+v0000019924759510_0 .net "borrow", 0 0, L_00000199247574f0;  alias, 1 drivers
+v00000199246555d0_0 .net "difference", 0 0, L_0000019924758160;  alias, 1 drivers
+    .scope S_00000199246552b0;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "half_subtractor.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000199246552b0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019924655670_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001992475b860_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019924655670_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001992475b860_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019924655670_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001992475b860_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019924655670_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001992475b860_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "half_subtractor_tb.v";
+    "./half_subtractor.v";

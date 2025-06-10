@@ -1,0 +1,28 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000022af1f26ac0 .scope module, "mux2_1" "mux2_1" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "sel";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+o0000022af1d76ab8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022af1f26c50_0 .net "a", 0 0, o0000022af1d76ab8;  0 drivers
+o0000022af1d76ae8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022af1f26cf0_0 .net "b", 0 0, o0000022af1d76ae8;  0 drivers
+v0000022af1f26d90_0 .net "out", 0 0, L_0000022af1f2d040;  1 drivers
+o0000022af1d76b48 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022af1f26e30_0 .net "sel", 0 0, o0000022af1d76b48;  0 drivers
+L_0000022af1f2d040 .functor MUXZ 1, o0000022af1d76ab8, o0000022af1d76ae8, o0000022af1d76b48, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux2_1.v";

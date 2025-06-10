@@ -1,0 +1,85 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001f4950cbc00 .scope module, "logic_gates_tb" "logic_gates_tb" 2 3;
+ .timescale 0 0;
+v000001f494f90700_0 .var "a", 0 0;
+v000001f494f90660_0 .net "and_out", 0 0, L_000001f494f46c90;  1 drivers
+v000001f494f900c0_0 .var "b", 0 0;
+v000001f494f90160_0 .net "nand_out", 0 0, L_000001f4950c6f20;  1 drivers
+v000001f494f8ff80_0 .net "nor_out", 0 0, L_000001f494f42e00;  1 drivers
+v000001f494f90340_0 .net "notb_out", 0 0, L_000001f494f42b60;  1 drivers
+v000001f494f903e0_0 .net "or_out", 0 0, L_000001f4950c6eb0;  1 drivers
+v000001f494f8f940_0 .net "xnor_out", 0 0, L_000001f494f42850;  1 drivers
+v000001f494f902a0_0 .net "xor_out", 0 0, L_000001f494f42c40;  1 drivers
+S_000001f4950cbd90 .scope module, "uut" "logic_gates" 2 6, 3 1 0, S_000001f4950cbc00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "and_out";
+    .port_info 3 /OUTPUT 1 "or_out";
+    .port_info 4 /OUTPUT 1 "nand_out";
+    .port_info 5 /OUTPUT 1 "nor_out";
+    .port_info 6 /OUTPUT 1 "notb_out";
+    .port_info 7 /OUTPUT 1 "xor_out";
+    .port_info 8 /OUTPUT 1 "xnor_out";
+L_000001f494f46c90 .functor AND 1, v000001f494f90700_0, v000001f494f900c0_0, C4<1>, C4<1>;
+L_000001f4950c6eb0 .functor OR 1, v000001f494f90700_0, v000001f494f900c0_0, C4<0>, C4<0>;
+L_000001f4950c6f20 .functor NAND 1, v000001f494f90700_0, v000001f494f900c0_0, C4<1>, C4<1>;
+L_000001f494f42e00 .functor NOR 1, v000001f494f90700_0, v000001f494f900c0_0, C4<0>, C4<0>;
+L_000001f494f42b60 .functor NOT 1, v000001f494f900c0_0, C4<0>, C4<0>, C4<0>;
+L_000001f494f42c40 .functor XOR 1, v000001f494f90700_0, v000001f494f900c0_0, C4<0>, C4<0>;
+L_000001f494f42850 .functor XNOR 1, v000001f494f90700_0, v000001f494f900c0_0, C4<0>, C4<0>;
+v000001f4950cad20_0 .net "a", 0 0, v000001f494f90700_0;  1 drivers
+v000001f4950c6af0_0 .net "and_out", 0 0, L_000001f494f46c90;  alias, 1 drivers
+v000001f4950c6b90_0 .net "b", 0 0, v000001f494f900c0_0;  1 drivers
+v000001f4950c6c30_0 .net "nand_out", 0 0, L_000001f4950c6f20;  alias, 1 drivers
+v000001f4950c6cd0_0 .net "nor_out", 0 0, L_000001f494f42e00;  alias, 1 drivers
+v000001f4950c6d70_0 .net "notb_out", 0 0, L_000001f494f42b60;  alias, 1 drivers
+v000001f4950c6e10_0 .net "or_out", 0 0, L_000001f4950c6eb0;  alias, 1 drivers
+v000001f494f8fe40_0 .net "xnor_out", 0 0, L_000001f494f42850;  alias, 1 drivers
+v000001f494f90020_0 .net "xor_out", 0 0, L_000001f494f42c40;  alias, 1 drivers
+    .scope S_000001f4950cbc00;
+T_0 ;
+    %vpi_call 2 19 "$dumpfile", "logic_gates.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001f4950cbc00 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f90700_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f900c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f90700_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001f494f900c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001f494f90700_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f900c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001f494f90700_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001f494f900c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f90700_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001f494f900c0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 26 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "logic_gates_tb.v";
+    "./logic_gates.v";
