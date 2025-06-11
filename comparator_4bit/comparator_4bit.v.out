@@ -1,0 +1,31 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000021e26896ab0 .scope module, "comparator_4bit" "comparator_4bit" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "agb";
+    .port_info 1 /OUTPUT 1 "aeb";
+    .port_info 2 /OUTPUT 1 "alb";
+    .port_info 3 /INPUT 4 "a";
+    .port_info 4 /INPUT 4 "b";
+o0000021e267d6e68 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000021e267d68e0_0 .net "a", 3 0, o0000021e267d6e68;  0 drivers
+v0000021e267d65d0_0 .net "aeb", 0 0, L_0000021e26896ec0;  1 drivers
+v0000021e26896c40_0 .net "agb", 0 0, L_0000021e26896e20;  1 drivers
+v0000021e26896ce0_0 .net "alb", 0 0, L_0000021e2689dc50;  1 drivers
+o0000021e267d6f28 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000021e26896d80_0 .net "b", 3 0, o0000021e267d6f28;  0 drivers
+L_0000021e26896e20 .cmp/gt 4, o0000021e267d6e68, o0000021e267d6f28;
+L_0000021e26896ec0 .cmp/eq 4, o0000021e267d6e68, o0000021e267d6f28;
+L_0000021e2689dc50 .cmp/gt 4, o0000021e267d6f28, o0000021e267d6e68;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "comparator_4bit.v";

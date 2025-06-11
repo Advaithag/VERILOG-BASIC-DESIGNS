@@ -1,0 +1,44 @@
+$date
+	Wed Jun 11 13:58:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hex_to_binary_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 16 " in [15:0] $end
+$scope module uut $end
+$var wire 16 # in [15:0] $end
+$var wire 4 $ out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1111 !
+b1111 $
+b1000000000000000 "
+b1000000000000000 #
+#20
+b1010 !
+b1010 $
+b10000000000 "
+b10000000000 #
+#30
+b1 !
+b1 $
+b10 "
+b10 #
+#40
