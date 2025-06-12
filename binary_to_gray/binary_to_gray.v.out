@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001f9a3566a30 .scope module, "binary_to_gray" "binary_to_gray" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "bin";
+    .port_info 1 /OUTPUT 4 "gray";
+L_000001f9a3567300 .functor XOR 1, L_000001f9a3492460, L_000001f9a3491880, C4<0>, C4<0>;
+L_000001f9a3567510 .functor XOR 1, L_000001f9a34919c0, L_000001f9a3492500, C4<0>, C4<0>;
+L_000001f9a356ec60 .functor XOR 1, L_000001f9a34925a0, L_000001f9a3491ce0, C4<0>, C4<0>;
+v000001f9a3566bc0_0 .net *"_ivl_10", 0 0, L_000001f9a3567300;  1 drivers
+v000001f9a3566c60_0 .net *"_ivl_15", 0 0, L_000001f9a34919c0;  1 drivers
+v000001f9a3566d00_0 .net *"_ivl_17", 0 0, L_000001f9a3492500;  1 drivers
+v000001f9a3566da0_0 .net *"_ivl_18", 0 0, L_000001f9a3567510;  1 drivers
+v000001f9a3566e40_0 .net *"_ivl_24", 0 0, L_000001f9a34925a0;  1 drivers
+v000001f9a356e6d0_0 .net *"_ivl_26", 0 0, L_000001f9a3491ce0;  1 drivers
+v000001f9a356e770_0 .net *"_ivl_27", 0 0, L_000001f9a356ec60;  1 drivers
+v000001f9a356e810_0 .net *"_ivl_3", 0 0, L_000001f9a356ebc0;  1 drivers
+v000001f9a356e8b0_0 .net *"_ivl_7", 0 0, L_000001f9a3492460;  1 drivers
+v000001f9a356e9e0_0 .net *"_ivl_9", 0 0, L_000001f9a3491880;  1 drivers
+o000001f9a34971b8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v000001f9a356ea80_0 .net "bin", 3 0, o000001f9a34971b8;  0 drivers
+v000001f9a356eb20_0 .net "gray", 3 0, L_000001f9a3491e20;  1 drivers
+L_000001f9a356ebc0 .part o000001f9a34971b8, 3, 1;
+L_000001f9a3492460 .part o000001f9a34971b8, 3, 1;
+L_000001f9a3491880 .part o000001f9a34971b8, 2, 1;
+L_000001f9a34919c0 .part o000001f9a34971b8, 2, 1;
+L_000001f9a3492500 .part o000001f9a34971b8, 1, 1;
+L_000001f9a3491e20 .concat8 [ 1 1 1 1], L_000001f9a356ec60, L_000001f9a3567510, L_000001f9a3567300, L_000001f9a356ebc0;
+L_000001f9a34925a0 .part o000001f9a34971b8, 1, 1;
+L_000001f9a3491ce0 .part o000001f9a34971b8, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "binary_to_gray.v";

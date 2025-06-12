@@ -1,0 +1,98 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002727b9a4610 .scope module, "gray_to_binary_tb" "gray_to_binary_tb" 2 2;
+ .timescale 0 0;
+v000002727ba04800_0 .net "bin", 3 0, L_000002727ba043a0;  1 drivers
+v000002727ba041c0_0 .var "gray", 3 0;
+S_000002727b9b5fc0 .scope module, "uut" "gray_to_binary" 2 5, 3 1 0, S_000002727b9a4610;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "gray";
+    .port_info 1 /OUTPUT 4 "bin";
+L_000002727bb1af80 .functor XOR 1, L_000002727ba04b20, L_000002727ba046c0, C4<0>, C4<0>;
+L_000002727bb1b370 .functor XOR 1, L_000002727ba04300, L_000002727ba04580, C4<0>, C4<0>;
+L_000002727bb1b220 .functor XOR 1, L_000002727ba04440, L_000002727ba04f80, C4<0>, C4<0>;
+v000002727b9a47a0_0 .net *"_ivl_10", 0 0, L_000002727bb1af80;  1 drivers
+v000002727bb16e70_0 .net *"_ivl_15", 0 0, L_000002727ba04300;  1 drivers
+v000002727bb199e0_0 .net *"_ivl_17", 0 0, L_000002727ba04580;  1 drivers
+v000002727bb1bec0_0 .net *"_ivl_18", 0 0, L_000002727bb1b370;  1 drivers
+v000002727bb18ea0_0 .net *"_ivl_24", 0 0, L_000002727ba04440;  1 drivers
+v000002727b9b6150_0 .net *"_ivl_26", 0 0, L_000002727ba04f80;  1 drivers
+v000002727b9b61f0_0 .net *"_ivl_27", 0 0, L_000002727bb1b220;  1 drivers
+v000002727ba04260_0 .net *"_ivl_3", 0 0, L_000002727ba044e0;  1 drivers
+v000002727ba04120_0 .net *"_ivl_7", 0 0, L_000002727ba04b20;  1 drivers
+v000002727ba04080_0 .net *"_ivl_9", 0 0, L_000002727ba046c0;  1 drivers
+v000002727ba04620_0 .net "bin", 3 0, L_000002727ba043a0;  alias, 1 drivers
+v000002727ba04c60_0 .net "gray", 3 0, v000002727ba041c0_0;  1 drivers
+L_000002727ba044e0 .part v000002727ba041c0_0, 3, 1;
+L_000002727ba04b20 .part v000002727ba041c0_0, 2, 1;
+L_000002727ba046c0 .part L_000002727ba043a0, 3, 1;
+L_000002727ba04300 .part v000002727ba041c0_0, 1, 1;
+L_000002727ba04580 .part L_000002727ba043a0, 2, 1;
+L_000002727ba043a0 .concat8 [ 1 1 1 1], L_000002727bb1b220, L_000002727bb1b370, L_000002727bb1af80, L_000002727ba044e0;
+L_000002727ba04440 .part v000002727ba041c0_0, 0, 1;
+L_000002727ba04f80 .part L_000002727ba043a0, 1, 1;
+    .scope S_000002727b9a4610;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "gray_to_binary.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002727b9a4610 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v000002727ba041c0_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "gray_to_binary_tb.v";
+    "./gray_to_binary.v";

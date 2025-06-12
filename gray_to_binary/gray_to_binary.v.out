@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001b18c606a30 .scope module, "gray_to_binary" "gray_to_binary" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "gray";
+    .port_info 1 /OUTPUT 4 "bin";
+L_000001b18c607510 .functor XOR 1, L_000001b18c6720a0, L_000001b18c6723c0, C4<0>, C4<0>;
+L_000001b18c607300 .functor XOR 1, L_000001b18c671880, L_000001b18c671ba0, C4<0>, C4<0>;
+L_000001b18c60ec60 .functor XOR 1, L_000001b18c6725a0, L_000001b18c672140, C4<0>, C4<0>;
+v000001b18c606bc0_0 .net *"_ivl_10", 0 0, L_000001b18c607510;  1 drivers
+v000001b18c606c60_0 .net *"_ivl_15", 0 0, L_000001b18c671880;  1 drivers
+v000001b18c606d00_0 .net *"_ivl_17", 0 0, L_000001b18c671ba0;  1 drivers
+v000001b18c606da0_0 .net *"_ivl_18", 0 0, L_000001b18c607300;  1 drivers
+v000001b18c606e40_0 .net *"_ivl_24", 0 0, L_000001b18c6725a0;  1 drivers
+v000001b18c60e6d0_0 .net *"_ivl_26", 0 0, L_000001b18c672140;  1 drivers
+v000001b18c60e770_0 .net *"_ivl_27", 0 0, L_000001b18c60ec60;  1 drivers
+v000001b18c60e810_0 .net *"_ivl_3", 0 0, L_000001b18c60ebc0;  1 drivers
+v000001b18c60e8b0_0 .net *"_ivl_7", 0 0, L_000001b18c6720a0;  1 drivers
+v000001b18c60e9e0_0 .net *"_ivl_9", 0 0, L_000001b18c6723c0;  1 drivers
+v000001b18c60ea80_0 .net "bin", 3 0, L_000001b18c671a60;  1 drivers
+o000001b18c6771e8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v000001b18c60eb20_0 .net "gray", 3 0, o000001b18c6771e8;  0 drivers
+L_000001b18c60ebc0 .part o000001b18c6771e8, 3, 1;
+L_000001b18c6720a0 .part o000001b18c6771e8, 2, 1;
+L_000001b18c6723c0 .part L_000001b18c671a60, 3, 1;
+L_000001b18c671880 .part o000001b18c6771e8, 1, 1;
+L_000001b18c671ba0 .part L_000001b18c671a60, 2, 1;
+L_000001b18c671a60 .concat8 [ 1 1 1 1], L_000001b18c60ec60, L_000001b18c607300, L_000001b18c607510, L_000001b18c60ebc0;
+L_000001b18c6725a0 .part o000001b18c6771e8, 0, 1;
+L_000001b18c672140 .part L_000001b18c671a60, 1, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "gray_to_binary.v";

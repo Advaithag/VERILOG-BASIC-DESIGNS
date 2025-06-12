@@ -1,0 +1,110 @@
+$date
+	Fri Jun 13 00:52:16 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module binary_to_sevensegment_tb $end
+$var wire 1 ! g $end
+$var wire 1 " f $end
+$var wire 1 # e $end
+$var wire 1 $ d $end
+$var wire 1 % c $end
+$var wire 1 & b $end
+$var wire 1 ' a $end
+$var reg 4 ( bin [3:0] $end
+$scope module uut $end
+$var wire 4 ) bin [3:0] $end
+$var reg 1 ' a $end
+$var reg 1 & b $end
+$var reg 1 % c $end
+$var reg 1 $ d $end
+$var reg 1 # e $end
+$var reg 1 " f $end
+$var reg 1 ! g $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+1'
+1&
+1%
+1$
+1#
+1"
+0!
+$end
+#10
+0'
+0$
+0#
+0"
+b1 (
+b1 )
+#20
+1'
+0%
+1$
+1#
+1!
+b10 (
+b10 )
+#30
+1%
+0#
+b11 (
+b11 )
+#40
+0'
+0$
+1"
+b100 (
+b100 )
+#50
+1'
+0&
+1$
+b101 (
+b101 )
+#60
+1#
+b110 (
+b110 )
+#70
+1&
+0$
+0#
+0"
+0!
+b111 (
+b111 )
+#80
+1$
+1#
+1"
+1!
+b1000 (
+b1000 )
+#90
+0#
+b1001 (
+b1001 )
+#100
+0'
+0&
+0%
+0$
+0"
+0!
+b1010 (
+b1010 )
+#110
